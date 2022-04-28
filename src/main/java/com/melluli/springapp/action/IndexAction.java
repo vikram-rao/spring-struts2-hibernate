@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class IndexAction extends ActionSupport {
 
     @Autowired
-    CalcHistoryService calcHistoryService;
+    private CalcHistoryService calcHistoryService;
 
     public CalcHistoryService getCalcHistoryService() {
         return calcHistoryService;

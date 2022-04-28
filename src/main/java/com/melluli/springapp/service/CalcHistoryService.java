@@ -10,7 +10,8 @@ import com.melluli.springapp.model.CalcHistory;
 
 public class CalcHistoryService {
 
-    SessionFactory sessionFactory;
+    @Autowired
+    private SessionFactory sessionFactory;
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;
@@ -22,7 +23,7 @@ public class CalcHistoryService {
 
     @Transactional
     public void save(CalcHistory calcHistory) {
-        Session currentSession = getSessionFactory().getCurrentSession();
+        Session currentSession = sessionFactory.getCurrentSession();
         currentSession.save(calcHistory);
     }
 

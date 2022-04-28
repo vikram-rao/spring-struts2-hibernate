@@ -32,9 +32,7 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
-    <bean id="calcHistoryService" class="com.melluli.springapp.service.CalcHistoryService">
-        <property name="sessionFactory" ref="sessionFactory" />
-    </bean>
+    <bean id="calcHistoryService" class="com.melluli.springapp.service.CalcHistoryService" autowire="byType"/>
 
     <tx:annotation-driven/>
 </beans>
